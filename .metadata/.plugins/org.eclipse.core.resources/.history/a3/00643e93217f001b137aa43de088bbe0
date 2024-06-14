@@ -1,0 +1,30 @@
+package Mysqlpackage;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class InsertRecord {
+	public static void main(String[] args) {
+		Statement stmt = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
+			stmt = con.createStatement();
+//MySQL Queries – JDBC Mob:8888809416
+//2 | P a g e J a v a B y K i r a n . c o m
+			String sql = "INSERT INTO Person VALUES (11, 'A', 'B', 18)";
+			stmt.executeUpdate(sql);
+			sql = "INSERT INTO Person VALUES (22, 'C', 'D', 25)";
+			stmt.executeUpdate(sql);
+			sql = "INSERT INTO Person VALUES (33, 'E', 'F', 30)";
+			stmt.executeUpdate(sql);
+			sql = "INSERT INTO Person VALUES(44, 'S', 'M', 28)";
+			stmt.executeUpdate(sql);
+			System.out.println("All record Inserted...");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+

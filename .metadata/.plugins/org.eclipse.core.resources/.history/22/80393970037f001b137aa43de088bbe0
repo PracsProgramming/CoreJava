@@ -1,0 +1,27 @@
+package Mysqlpackage;
+
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.ResultSet;
+import com.mysql.jdbc.Statement;
+
+public class SelectedRecord {
+public static void main(String[] args) {
+	Statement stmt = null;
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
+		stmt = (Statement) con.createStatement();
+		String sql = "SELECT * FROM student";
+		ResultSet rs = (ResultSet) stmt.executeQuery(sql);
+		while(rs.next()) {
+			int id = rs.getInt(1);
+			String name = rs.getString(2);
+			int age = rs.getInt(3);
+		}
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+}
+}

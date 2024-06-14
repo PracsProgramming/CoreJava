@@ -1,0 +1,10 @@
+package SuperConstructor;
+
+public class MainClass {
+	public static void main(String[] args) {
+		
+	
+	Chair d=new Chair();
+	d.printColor();
+}
+}

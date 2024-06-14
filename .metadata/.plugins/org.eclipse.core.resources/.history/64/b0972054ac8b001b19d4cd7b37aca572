@@ -1,0 +1,47 @@
+
+
+
+	/* 
+	 * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+	 * Your class should be named CandidateCode.
+	*/
+
+	import java.util.*;
+	public class prime {
+	    public static void main(String args[] ) throws Exception {
+
+	        int num = 0;
+	        String  primeNumbers = "";
+	    	//Write code here
+	        @SuppressWarnings("resource")
+			Scanner MinRange = new Scanner(System.in);
+	        String Min = MinRange.next();
+	        @SuppressWarnings("resource")
+			Scanner MaxRange = new Scanner(System.in);
+	       String Max = MaxRange.next();
+	         int MinRan = Integer.valueOf(Min);
+	         int MaxRan = Integer.valueOf(Max);
+	        //find prime number for given range
+
+	        for(int i = MinRan;i<=MaxRan;i++){
+	        	
+	            int counter = 0;
+	              for(num =i; num>=1; num--){
+	                if(i%num==0)
+	             	     {
+	 		        counter = counter + 1;
+		                  }
+	              		}
+		        if (counter ==2)
+		        {
+		     //Appended the Prime number to the String
+		     primeNumbers = primeNumbers + i + " ";
+		        }
+	        }
+
+
+
+	   }
+	}
+
+

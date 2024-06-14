@@ -1,0 +1,18 @@
+package SuperConstructor;
+
+public class MainClass {
+	public static void main(String[] args) {
+		
+	
+	Chair d=new Chair();
+	d.printColor();
+	
+	 Car small = new Car();
+	 small.display();
+	 
+	 Chair obj=new Chair();
+	 obj.work();
+
+
+}
+}

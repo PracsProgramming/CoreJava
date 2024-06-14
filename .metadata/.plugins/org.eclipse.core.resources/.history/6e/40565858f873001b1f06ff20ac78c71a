@@ -1,0 +1,7 @@
+package SuperConstructor;
+
+public class MainClass {
+	Chair d=new Chair();
+	d.printColor();
+}
+}
